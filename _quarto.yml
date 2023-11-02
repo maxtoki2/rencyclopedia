@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "rencyclopedia"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Home"
+        contents:
+          - index.qmd
+      - section: "Q"
+        contents:
+          - qrcodes.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

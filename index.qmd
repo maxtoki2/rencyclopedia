@@ -11,34 +11,4 @@ execute:
   eval: false
 ---
 
-# QR codes
-
-Source: [**Scanning QR codes in R**](https://ropensci.org/blog/2023/10/30/opencv-qr/)
-
-Packages:
-
--   `opencv`
-
--   `qrcode`
-
-Reading QR codes from an image
-
-```{r}
-img <-  opencv::ocv_read('https://jeroen.github.io/images/qrtest.jpg')
-opencv::ocv_qr_detect(img)
-```
-
-Reading QR codes from the camera
-
-```{r}
-# This requires a camera
-txt <- opencv::qr_scanner()
-```
-
-Generating a QR code image
-
-```{r}
-png("qr-test.png")
-plot(qrcode::qr_code("This is a test!"))
-dev.off()
-```
+This is the home page
