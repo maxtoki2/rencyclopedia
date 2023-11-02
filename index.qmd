@@ -1,14 +1,5 @@
 ---
 title: "rencyclopedia"
-author: "MM"
-format: 
-  html:
-    toc: true
-    toc-depth: 2
-    toc-location: left
-editor: visual
-execute:
-  eval: false
 ---
 
-This is the home page
+Collection of R snippets.

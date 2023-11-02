@@ -8,15 +8,20 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Home"
-        contents:
-          - index.qmd
-      - section: "Q"
-        contents:
-          - qrcodes.qmd
+    - section: "Main"
+      contents:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    - section: "Q"
+      contents:
+      - qrcodes.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+
+editor: visual
+

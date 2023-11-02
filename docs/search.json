@@ -4,6 +4,20 @@
     "href": "index.html",
     "title": "rencyclopedia",
     "section": "",
-    "text": "This is the home page"
+    "text": "Collection of R snippets."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Last updated on 2023-11-02"
+  },
+  {
+    "objectID": "qrcodes.html",
+    "href": "qrcodes.html",
+    "title": "QR Codes",
+    "section": "",
+    "text": "QR codes\nSource: Scanning QR codes in R\nPackages: opencv, qrcode\nReading QR codes from an image\n\nimg <-  opencv::ocv_read('https://jeroen.github.io/images/qrtest.jpg')\nopencv::ocv_qr_detect(img)\n\nReading QR codes from the camera\n\n# This requires a camera\ntxt <- opencv::qr_scanner()\n\nGenerating a QR code image\n\npng(\"qr-test.png\")\nplot(qrcode::qr_code(\"This is a test!\"))\ndev.off()"
   }
 ]
