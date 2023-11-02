@@ -25,6 +25,6 @@
     "href": "geocoding.html",
     "title": "geocoding",
     "section": "",
-    "text": "Geocoding addresses\nSource: Geocode address text strings using tidygeocoder\nPackages: tidygeocoder\n\nlibrary(tidygeocoder)\n\nWarning: package 'tidygeocoder' was built under R version 4.2.3\n\nlibrary(dplyr)\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n df <- data.frame(text_to_geocode = c(\"Bologna, Italy\", \"Parma, Italy\"))\n \n df %>% \n    geocode(text_to_geocode, method = \"osm\")\n\nPassing 2 addresses to the Nominatim single address geocoder\n\n\nQuery completed in: 2.6 seconds\n\n\n# A tibble: 2 × 3\n  text_to_geocode   lat  long\n  <chr>           <dbl> <dbl>\n1 Bologna, Italy   44.5  11.3\n2 Parma, Italy     44.8  10.3"
+    "text": "Geocoding addresses\nSource: Geocode address text strings using tidygeocoder\nPackages: tidygeocoder\n\nlibrary(tidygeocoder)\nlibrary(dplyr)\n\n df <- data.frame(text_to_geocode = c(\"Bologna, Italy\", \"Parma, Italy\"))\n \n df %>% \n    geocode(text_to_geocode, method = \"osm\")\n\n# A tibble: 2 × 3\n  text_to_geocode   lat  long\n  <chr>           <dbl> <dbl>\n1 Bologna, Italy   44.5  11.3\n2 Parma, Italy     44.8  10.3"
   }
 ]
