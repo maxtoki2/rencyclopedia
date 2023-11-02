@@ -13,6 +13,9 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+    - section: "G"
+      contents:
+        - geocoding.qmd
     - section: "Q"
       contents:
       - qrcodes.qmd

@@ -1,0 +1,19 @@
+---
+title: "geocoding"
+---
+
+# Geocoding addresses
+
+Source: [**Geocode address text strings using `tidygeocoder`**](https://ikashnitsky.phd/2023/geocoding/index.html)
+
+Packages: `tidygeocoder`
+
+```{r}
+library(tidygeocoder)
+library(dplyr)
+
+ df <- data.frame(text_to_geocode = c("Bologna, Italy", "Parma, Italy"))
+ 
+ df %>% 
+    geocode(text_to_geocode, method = "osm")
+```

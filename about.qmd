@@ -2,4 +2,4 @@
 title: "About"
 ---
 
-Last updated on `r Sys.Date()`
+Last updated on `r Sys.time()`

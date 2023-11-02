@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Last updated on 2023-11-02"
+    "text": "Last updated on 2023-11-02 06:50:51"
   },
   {
     "objectID": "qrcodes.html",
@@ -19,5 +19,12 @@
     "title": "QR Codes",
     "section": "",
     "text": "QR codes\nSource: Scanning QR codes in R\nPackages: opencv, qrcode\nReading QR codes from an image\n\nimg <-  opencv::ocv_read('https://jeroen.github.io/images/qrtest.jpg')\nopencv::ocv_qr_detect(img)\n\nReading QR codes from the camera\n\n# This requires a camera\ntxt <- opencv::qr_scanner()\n\nGenerating a QR code image\n\npng(\"qr-test.png\")\nplot(qrcode::qr_code(\"This is a test!\"))\ndev.off()"
+  },
+  {
+    "objectID": "geocoding.html",
+    "href": "geocoding.html",
+    "title": "geocoding",
+    "section": "",
+    "text": "Geocoding addresses\nSource: Geocode address text strings using tidygeocoder\nPackages: tidygeocoder\n\nlibrary(tidygeocoder)\n\nWarning: package 'tidygeocoder' was built under R version 4.2.3\n\nlibrary(dplyr)\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n df <- data.frame(text_to_geocode = c(\"Bologna, Italy\", \"Parma, Italy\"))\n \n df %>% \n    geocode(text_to_geocode, method = \"osm\")\n\nPassing 2 addresses to the Nominatim single address geocoder\n\n\nQuery completed in: 2.6 seconds\n\n\n# A tibble: 2 × 3\n  text_to_geocode   lat  long\n  <chr>           <dbl> <dbl>\n1 Bologna, Italy   44.5  11.3\n2 Parma, Italy     44.8  10.3"
   }
 ]
