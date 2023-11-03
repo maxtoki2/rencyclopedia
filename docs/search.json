@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "rencyclopedia",
-    "section": "",
-    "text": "Collection of R snippets."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Last updated on 2023-11-02 06:50:51"
-  },
-  {
-    "objectID": "qrcodes.html",
-    "href": "qrcodes.html",
-    "title": "QR Codes",
-    "section": "",
-    "text": "QR codes\nSource: Scanning QR codes in R\nPackages: opencv, qrcode\nReading QR codes from an image\n\nimg <-  opencv::ocv_read('https://jeroen.github.io/images/qrtest.jpg')\nopencv::ocv_qr_detect(img)\n\nReading QR codes from the camera\n\n# This requires a camera\ntxt <- opencv::qr_scanner()\n\nGenerating a QR code image\n\npng(\"qr-test.png\")\nplot(qrcode::qr_code(\"This is a test!\"))\ndev.off()"
+    "text": "Last updated on 2023-11-03 04:46:57"
   },
   {
     "objectID": "geocoding.html",
@@ -26,5 +12,19 @@
     "title": "geocoding",
     "section": "",
     "text": "Geocoding addresses\nSource: Geocode address text strings using tidygeocoder\nPackages: tidygeocoder\n\nlibrary(tidygeocoder)\nlibrary(dplyr)\n\n df <- data.frame(text_to_geocode = c(\"Bologna, Italy\", \"Parma, Italy\"))\n \n df %>% \n    geocode(text_to_geocode, method = \"osm\")\n\n# A tibble: 2 × 3\n  text_to_geocode   lat  long\n  <chr>           <dbl> <dbl>\n1 Bologna, Italy   44.5  11.3\n2 Parma, Italy     44.8  10.3"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "rencyclopedia",
+    "section": "",
+    "text": "Collection of R snippets."
+  },
+  {
+    "objectID": "qrcodes.html",
+    "href": "qrcodes.html",
+    "title": "QR Codes",
+    "section": "",
+    "text": "QR codes\nSource: Scanning QR codes in R\nPackages: opencv, qrcode\nReading QR codes from an image\n\nimg <-  opencv::ocv_read('https://jeroen.github.io/images/qrtest.jpg')\nopencv::ocv_qr_detect(img)\n\nReading QR codes from the camera\n\n# This requires a camera\ntxt <- opencv::qr_scanner()\n\nGenerating a QR code image\n\npng(\"qr-test.png\")\nplot(qrcode::qr_code(\"This is a test!\"))\ndev.off()"
   }
 ]
