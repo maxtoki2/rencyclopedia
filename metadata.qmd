@@ -1,0 +1,18 @@
+---
+title: "Metadata (File)"
+execute: 
+  warning: false
+---
+
+# Extract metadata from files
+
+Packages: `rtika`.
+
+The example shows the extraction of metadata from a .mp3 file, but it works for a multitude of formats, including video, pdf, etc.
+
+``` r
+library(rtika)
+library(jsonlite)
+json <- tika_json("https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3")
+fromJSON(json)
+```

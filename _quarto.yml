@@ -16,6 +16,9 @@ website:
     - section: "G"
       contents:
         - geocoding.qmd
+    - section: "M"
+      contents:
+        - metadata.qmd
     - section: "Q"
       contents:
       - qrcodes.qmd

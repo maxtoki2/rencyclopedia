@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>rencyclopedia - geocoding</title>
+<title>rencyclopedia - Metadata (File)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">geocoding</h1>
+      <h1 class="quarto-secondary-nav-title">Metadata (File)</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -185,7 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./geocoding.html" class="sidebar-item-text sidebar-link active">geocoding</a>
+  <a href="./geocoding.html" class="sidebar-item-text sidebar-link">geocoding</a>
   </div>
 </li>
       </ul>
@@ -200,7 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./metadata.html" class="sidebar-item-text sidebar-link">Metadata (File)</a>
+  <a href="./metadata.html" class="sidebar-item-text sidebar-link active">Metadata (File)</a>
   </div>
 </li>
       </ul>
@@ -229,7 +229,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#geocoding-addresses" id="toc-geocoding-addresses" class="nav-link active" data-scroll-target="#geocoding-addresses">Geocoding addresses</a></li>
+  <li><a href="#extract-metadata-from-files" id="toc-extract-metadata-from-files" class="nav-link active" data-scroll-target="#extract-metadata-from-files">Extract metadata from files</a></li>
   </ul>
 </nav>
     </div>
@@ -238,7 +238,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">geocoding</h1>
+<h1 class="title d-none d-lg-block">Metadata (File)</h1>
 </div>
 
 
@@ -253,26 +253,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="geocoding-addresses" class="level1">
-<h1>Geocoding addresses</h1>
-<p>Source: <a href="https://ikashnitsky.phd/2023/geocoding/index.html"><strong>Geocode address text strings using <code>tidygeocoder</code></strong></a></p>
-<p>Packages: <code>tidygeocoder</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidygeocoder)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a> df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">text_to_geocode =</span> <span class="fu">c</span>(<span class="st">"Bologna, Italy"</span>, <span class="st">"Parma, Italy"</span>))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a> df <span class="sc">%&gt;%</span> </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geocode</span>(text_to_geocode, <span class="at">method =</span> <span class="st">"osm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 3
-  text_to_geocode   lat  long
-  &lt;chr&gt;           &lt;dbl&gt; &lt;dbl&gt;
-1 Bologna, Italy   44.5  11.3
-2 Parma, Italy     44.8  10.3</code></pre>
-</div>
-</div>
+<section id="extract-metadata-from-files" class="level1">
+<h1>Extract metadata from files</h1>
+<p>Packages: <code>rtika</code>.</p>
+<p>The example shows the extraction of metadata from a .mp3 file, but it works for a multitude of formats, including video, pdf, etc.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rtika)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>json <span class="ot">&lt;-</span> <span class="fu">tika_json</span>(<span class="st">"https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">fromJSON</span>(json)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

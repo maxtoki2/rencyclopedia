@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Last updated on 2023-11-03 04:46:57"
+    "text": "Last updated on 2023-11-14 01:50:04"
   },
   {
     "objectID": "geocoding.html",
@@ -19,6 +19,13 @@
     "title": "rencyclopedia",
     "section": "",
     "text": "Collection of R snippets."
+  },
+  {
+    "objectID": "metadata.html",
+    "href": "metadata.html",
+    "title": "Metadata (File)",
+    "section": "",
+    "text": "Extract metadata from files\nPackages: rtika.\nThe example shows the extraction of metadata from a .mp3 file, but it works for a multitude of formats, including video, pdf, etc.\nlibrary(rtika)\nlibrary(jsonlite)\njson <- tika_json(\"https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3\")\nfromJSON(json)"
   },
   {
     "objectID": "qrcodes.html",
